@@ -6,5 +6,5 @@ Commande a utilisée dans le shell Proxmox pour installer HAOS avec les paramèt
    - Disk : 200 Go
 ### Installation
 ```bash
-bash -c "$(wget -qLO - https://raw.githubusercontent.com/tino70/proxmox/main/haos-vm.sh)"
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/tino70/proxmox-haos/main/haos-vm.sh)"
 ```
