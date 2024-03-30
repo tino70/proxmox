@@ -160,8 +160,8 @@ function default_settings() {
   DISK_CACHE="cache=writethrough,"
   HN="haos$stable"
   CPU_TYPE=" -cpu host"
-  CORE_COUNT="2"
-  RAM_SIZE="4096"
+  CORE_COUNT="8"
+  RAM_SIZE="10240"
   BRG="vmbr0"
   MAC="$GEN_MAC"
   VLAN=""
@@ -447,7 +447,7 @@ pvesm alloc $STORAGE $VMID $DISK0 4M 1>&/dev/null
 qm importdisk $VMID ${FILE%.*} $STORAGE ${DISK_IMPORT:-} 1>&/dev/null
 qm set $VMID \
   -efidisk0 ${DISK0_REF}${FORMAT} \
-  -scsi0 ${DISK1_REF},${DISK_CACHE}${THIN}size=32G \
+  -scsi0 ${DISK1_REF},${DISK_CACHE}${THIN}size=200G \
   -boot order=scsi0 \
   -description "<div align='center'><a href='https://Helper-Scripts.com' target='_blank' rel='noopener noreferrer'><img src='https://raw.githubusercontent.com/tteck/Proxmox/main/misc/images/logo-81x112.png'/></a>
 
